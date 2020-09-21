@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>4.2.表单-登录界面-1688登录界面.html</title>
+    <style>
+        body, div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, code, del, dfn, em, img, q, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, dialog, figure, footer, header, hgroup, nav, section{
+            margin: 0;
+            padding: 0;
+            font-family: "微软雅黑";
+
+        }
+        a{
+            display: inline-block;
+            text-decoration: none;
+            font-size: 12px;
+            color: black;
+        }
+        li{
+            list-style: none;
+            float: left;
+        }
+
+        .logInPage .headerBox{
+            height: 49px;
+            width: 952px;
+            padding: 12px 4px;
+            margin:0 260px;
+            /*background-color: #FF9000;*/
+        }
+        .logInPage .headerBox .headerTitle{
+            height: 49px;
+            width: 229px;
+            /*background-color: #f46292;*/
+        }
+        .logInPage .headerBox .headerTitle .headerLogo{
+            height: 37px;
+            width: 150px;
+            margin: 4px 12px 0 0;
+            padding: 4px;
+            background: url("image学习/4.2/logo.png") no-repeat 50px 3px;
+            float: left;
+        }
+        .logInPage .headerBox .sub{
+            height: 30px;
+            line-height: 30px;
+            padding-left: 12px;
+            font-size: 22px;
+            font-weight: 700;
+            color: #666666;
+            float: left;
+            border-left: #cdcccc 1px solid;
+            box-sizing: border-box;
+            margin-top: 10px;
+            /*background-color: #0096d1;*/
+
+
+        }
+
+
+
+        .logInPage .bodyBox{
+            padding: 16px 4px 0;
+            width: 952px;
+            height: 495px;
+            padding: 16px 4px 0;
+            margin: 0 260px;
+        }
+        .logInPage .bodyBox .bodyContent{
+            width: 952px;
+            height: 436px;
+
+        }
+        .logInPage .bodyBox .bodyContent .bodyLeft{
+            width: 578px;
+            height: 350px;
+            float: left;
+        }
+        .logInPage .bodyBox .bodyContent .bodyRight{
+            width: 312px;
+            height: 455px;
+            margin-left: 60px;
+            float: right;
+        }
+        .logInPage .bodyBox .bodyContent .bodyRight .rigTitle{
+            width: 360px;
+            height: 32px;
+            border: #e7d3ac 1px solid;
+            background-color: #fffbdd;
+        }
+        .logInPage .bodyBox .bodyContent .bodyRight .rigTitle .rigTitle1{
+            width: 40px;
+            height: 32px;
+            background-image: url(//cbu01.alicdn.com/cms/upload/2013/012/178/1871210_1844408615.png);
+            background-repeat: no-repeat;
+            background-position: 12px 8px;
+            float: left;
+        }
+        .logInPage .bodyBox .bodyContent .bodyRight .rigTitle .rigTitle2{
+            width: 320px;
+            height: 32px;
+            font: 12px "宋体";
+            color: #f27800;
+            /* text-indent?*/
+            float: left;
+            margin-top: 10px;
+        }
+
+        .logInPage .bodyBox .bodyContent .bodyRight .rigBody{
+            width: 304px;
+            height: 262px;
+            padding: 25px;
+            border: #cccccc 1px solid;
+            margin:17px 56px 0 0;
+
+        }
+        .logInPage .bodyBox .bodyContent .bodyRight .rigBody .rigForm{
+            width: 304px;
+            height: 260px;
+            padding-top: 2px;
+        }
+        .logInPage .bodyBox .bodyContent .bodyRight .rigBody .rigForm .rigFormNav{
+            width: 304px;
+            height: 27px;
+            margin: 4px 0 20px;
+        }
+        .logInPage .bodyBox .bodyContent .bodyRight .rigBody .rigForm .rigFormNav a{
+            width: 64px;
+            height: 16px;
+            border-bottom: #000000 2px solid;
+            margin: 9px 10px 9px 0;
+            font-size: 16px;
+            font-weight: 700;
+            line-height: 5px;
+            color: #3c3c3c;
+        }
+        .logInPage .bodyBox .bodyContent .bodyRight .rigBody .rigForm .rigFormContent{
+            width: 304px;
+            height: 209px;
+
+        }
+        .logInPage .bodyBox .bodyContent .bodyRight .rigBody .rigForm .rigFormContent .in{
+            width: 304px;
+            height: 42px;
+            margin-bottom: 20px;
+            color: #6c6c6c;
+        }
+
+        .logInPage .bodyBox .bodyContent .bodyRight .rigBody .rigForm .rigFormContent .in input{
+            width: 250px;
+            height: 40px;
+            padding-left: 50px;
+            border: #f1eeee 1px solid;
+            font-size: 14px;
+
+        }
+        .logInPage .bodyBox .bodyContent .bodyRight .rigBody .rigForm .rigFormContent button{
+
+            width: 302px;
+            height: 42px;
+            border: #ff4400 1px solid;
+            border-radius:  3px;
+            background-color: #ff4400;
+            font-size: 16px;
+            color: #ffffff;
+
+        }
+
+        .logInPage .bodyBox .bodyContent .bodyRight .rigBody .rigForm .rigFormContent .forgot{
+            width: 304px;
+            height: 18px;
+            margin: 25px 0 0 107px;
+
+
+        }
+        .logInPage .bodyBox .bodyContent .bodyRight .rigBody .rigForm .rigFormContent .forgot a{
+            width: 60px;
+            height: 18px;
+            color: #6c6c6c;
+            font-size: 12px;
+            float: left;
+            margin-left: 7px;
+            box-sizing: border-box;
+            text-align: center;
+        }
+        .logInPage .bodyBox .bodyContent .bodyFooter{
+            width: 925px;
+            height: 40px;
+            float: left;
+
+        }
+        .logInPage .bodyBox .bodyContent .bodyFooter .bodyFooter1{
+            width: 925px;
+            height: 25px;
+            line-height: 15px;
+        }
+        .logInPage .bodyBox .bodyContent .bodyFooter .bodyFooter1 a{
+            color: #6c6c6c;
+        }
+        .logInPage .bodyBox .bodyContent .bodyFooter .bodyFooter2{
+            width: 925px;
+            height: 25px;
+            line-height: 15px;
+
+        }
+        .logInPage .bodyBox .bodyContent .bodyFooter .bodyFooter2 a:first-of-type{
+            float: left;
+            color: #6c6c6c;
+        }
+
+        .logInPage .bodyBox .bodyContent .bodyFooter .bodyFooter2 a:nth-of-type(2){
+            float: right;
+            color: #0f7099;
+        }
+
+        .logInPage .bodyBox .bodyContent .bodyFooter a{
+            font-family: "宋体";
+        }
+
+        .logInPage .footerBox{
+            height: 100px;
+            border-top: #f27800 3px solid;
+            margin: 8px 260px;
+            font-size: 12px;
+        }
+        .logInPage .footerBox .footerNav{
+            height: 30px;
+            line-height: 30px;
+            margin: 0 auto;
+
+        }
+        .logInPage .footerBox .footerNav1{
+            float: left;
+
+        }
+        .logInPage .footerBox .footerNav1 li a{
+            left: 10px;
+        }
+        .logInPage .footerBox .footerNav .ftTime {
+            display: inline-block;
+            float: left;
+            color: #6c6c6c;
+        }
+
+
+        .logInPage .footerBox .footerUl{
+            height: 30px;
+        }
+        .logInPage .footerBox .footerUl ul{
+            margin: 0 auto;
+        }
+        .logInPage .footerBox .footerUl a{
+            margin-left: 10px;
+        }
+
+        
+    </style>
+</head>
+<body>
+<div class="logInPage">
+    <div class="headerBox">
+        <div class="headerTitle">
+            <h1><a href="" class="headerLogo" title="商人的网站"></a>
+                <span class="sub">登录</span>
+            </h1>
+        </div>
+    </div>
+    <div class="bodyBox">
+        <div class="bodyContent">
+            <div class="bodyLeft">
+                <a href="" ><img src="image学习/4.2/TB1VBdwHQL0gK0jSZFtXXXQCXXa-555-344.png" alt=""></a>
+            </div>
+            <div class="bodyRight">
+                <div class="rigTitle">
+                    <div class="rigTitle1"></div>
+                    <div class="rigTitle2">1688/淘宝会员（仅限会员名）请在此登录</div>
+                </div>
+                <div class="rigBody">
+                    <div class="rigForm">
+                        <div class="rigFormNav">
+                            <a href="">密码登录</a><a href="">短信登录</a>
+                        </div>
+                        <form class="rigFormContent">
+                            <div class="in">
+                                <input type="text" placeholder="会员名/邮箱/手机号">
+
+                            </div>
+                            <div class="in">
+                                <input type="password" placeholder="请输入登录密码">
+
+                            </div>
+                            <div>
+                                <button type="submit" value="">登录</button>
+                            </div>
+                            <div class="forgot">
+                                <a href="">忘记密码</a><a href="">忘记用户名</a><a href="">免费注册</a>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <div class="bodyFooter">
+                <div class="bodyFooter1">
+                    <a href="">实力商家——助力中小企业快速成为平台头部商家。</a>
+                </div>
+                <div class="bodyFooter2">
+                    <a href="" >随时随地上网做生意，一切尽在手机阿里！</a>
+                    <a href="">“阿里巴巴中国站登录”改进建议</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="footerBox">
+        <div class="footerNav">
+            
+                <span class="ftTime">© 2010-2019 1688.com 版权所有</span>
+                <p class="footerNav1">
+<!--
+question：ul有不能居中问题，解决方法有待学习！
+-->
+                <ul>
+                    <li><a href="">著作权与商标声明</a>|</li>
+                    <li><a href="">法律声明</a>|</li>
+                    <li><a href="">服务条款</a>|</li>
+                    <li><a href="">隐私政策</a>|</li>
+                    <li><a href="">关于阿里巴巴</a>|</li>
+                    <li><a href="">联系我们</a>|</li>
+                    <li><a href="">网站导航</a></li>
+                </ul>
+            </p>
+        </div>
+        <div class="footerUl">
+            <ul>
+                <li><a href="">阿里巴巴集团</a>|</li>
+                <li><a href="">阿里巴巴国际站</a>|</li>
+                <li><a href="">阿里巴巴中国站</a>|</li>
+                <li><a href="">全球速卖通 </a>|</li>
+                <li><a href="">淘宝网</a>|</li>
+                <li><a href="">天猫</a>|</li>
+                <li><a href="">聚划算</a>|</li>
+                <li><a href="">一淘</a>|</li>
+                <li><a href="">阿里旅行 · 去啊</a>|</li>
+                <li><a href="">阿里妈妈</a>|</li>
+                <li><a href="">虾米</a>|</li>
+                <li><a href="">阿里云计算</a>|</li>
+                <li><a href="">YunOS</a>|</li>
+                <li><a href="">阿里通信</a>|</li>
+                <li><a href="">万网</a>|</li>
+                <li><a href="">UC</a>|</li>
+                <li><a href="">支付宝</a>|</li>
+                <li><a href="">来往</a>|</li>
+                <li><a href="">钉钉</a>|</li>
+                <li><a href="">阿里健康</a>|</li>
+                <li><a href="">一达通</a>|</li>
+                <li><a href="">Lazada</a></li>
+            </ul>
+        </div>
+    </div>
+</div>
+</body>
+</html>
