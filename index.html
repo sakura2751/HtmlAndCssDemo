@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>4.1.表单-注册界面-注册新浪通行证.html</title>
+    <style>
+        body, div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, code, del, dfn, em, img, q, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, dialog, figure, footer, header, hgroup, nav, section{
+            margin: 0;
+            padding: 0;
+            font-family: "宋体";
+
+        }
+        a{
+            text-decoration: none;
+            display: inline-block;
+        }
+        li{
+            list-style: none;
+        }
+        /*背景图片设置*/
+        body{
+            background: url("image学习/4.1/QQ图片20200529190854.png");
+        }
+        .bgImage{
+            background: url("image学习/4.1/reg_bg.jpg") no-repeat;
+        }
+        .logoInBox{
+            width: 900px;
+            margin: auto;
+        }
+
+        /*头信息设置*/
+        .logoInHeader{
+            width: 900px;
+            height: 80px;
+        }
+        .logoInHeader img{
+            margin-top: 35px;
+        }
+        .logoInHeader .headerNav{
+            margin-top: 55px;
+            float: right;
+            color: white;
+            font-size: 12px;
+        }
+        .logoInHeader .headerNav a{
+            color: white;
+        }
+
+        /*表单设置*/
+        .logoInBody{
+            width: 900px;
+            height: 542px;
+            background-color: #FAFAFA;
+            border-bottom:#cbcaca 1px solid;
+            font-size: 14px;
+
+        }
+
+        .logoInBody .bodyNav{
+            height: 57px;
+            border-top:  #FF9000 2px solid;
+            border-bottom:#cbcaca 1px solid;
+        }
+        .logoInBody .bodyNav a{
+            float: left;
+            border: #cbcaca 1px solid;
+            height: 37px;
+            line-height: 37px;
+            padding: 0 35px;
+            margin: 18px -8px 0 20px;
+
+        }
+
+
+        .bodyForm{
+            width:636px;
+            height: 386px;
+            border-right: #f3f0f0 2px solid;
+            float: left;
+
+        }
+        .bodyForm .bodyImg{
+            width: 109px;
+            height: 150px;
+            text-align: center;
+            margin-top: 40px;
+            float: left;
+        }
+        .bodyForm .allForm{
+            margin-top: 30px;
+            width: 500px;
+            height: 200px;
+            /*background-color: #FF9000;*/
+            float: left;
+        }
+        .bodyForm .allForm span{
+            color: #f46292;
+        }
+        .bodyForm .allForm .formContent{
+            width: 520px;
+            height: 50px;
+            line-height: 50px;
+        }
+
+        .bodyForm .allForm .formContent .ppNumber{
+            width: 300px;
+            float: left;
+        }
+        .bodyForm .allForm .formContent .ppAttention{
+            width: 210px;
+            float: right;
+            font-size: 12px;
+            line-height: 20px;
+            padding-top: 15px;
+        }
+        .bodyForm .formInput{
+            border: #bdbdbd 1px solid;
+            border-radius: 3px;
+            width: 200px;
+            height: 28px;
+
+        }
+        .bodyForm .allForm .formContent1{
+            width: 400px;
+            height: 20px;
+            margin-left: 85px;
+        }
+        .bodyForm .allForm .formContent1 .log{
+            color: #0096d1;
+        }
+        .bodyForm .attention{
+            font-size: 12px;
+        }
+
+        .bodyForm .allForm .formContent2{
+            width: 520px;
+            height: 60px;
+        }
+        .bodyForm .allForm .formContent2 .check{
+            width: 270px;
+            float: left;
+            padding-top: 5px;
+
+        }
+        .bodyForm .allForm .formContent2 .checkTitle{
+            width: 85px;
+            float: left;
+            margin-top: 15px;
+        }
+
+        .bodyForm .allForm .formContent3{
+            margin-left: -28px;
+            margin-bottom: 15px;
+
+        }
+        .bodyForm .allForm .formContent3 .sendMassage{
+            font-size:12px;
+            font-family: "宋体";
+            height: 31px;
+            border: #cbcaca 1px solid;
+            background-color: #f1f0f0;
+            border-radius: 3px;
+
+        }
+        .bodyForm .allForm .formContent4 a{
+            margin-top:15px;
+            margin-left: 85px;
+            font-size: 12px;
+            color: #0096d1;
+
+        }
+
+        .bodyAside{
+            height: 386px;
+            width: 260px;
+            border-left: #d0d0d0 1px solid;
+            float: left;
+        }
+        .bodyAside p{
+            margin-top: 40px;
+            margin-left: 21px;
+
+        }
+        .bodyAside p a{
+            color: #0096d1;
+        }
+
+        /*尾部信息设置*/
+        .logoInFooter{
+            height: 95px;
+            background-color: #FAFAFA;
+            overflow: hidden;
+        }
+        .logoInFooter .footerNav{
+            margin-left: 30px;
+            margin-top: 15px;
+            overflow: hidden;
+
+
+        }
+        .logoInFooter .footerNav a{
+            color: #0096d1;
+            font-size: 12px;
+            float: left;
+            margin-right: 12px;
+
+        }
+        .logoInFooter .footerMassage{
+            font-size: 12px;
+            color: #797979;
+            margin-left: 30px;
+            margin-top: 8px;
+        }
+        .logoInFooter .footerMassage a{
+            color: #0096d1;
+        }
+
+    </style>
+</head>
+<body>
+<div class="bgImage">
+<div class="logoInBox">
+<!--   头信息设置开始-->
+    <div class="logoInHeader">
+        <img src="image学习/4.1/tx_logo.gif" alt="">
+        <div class="headerNav">
+            <a href="">新浪首页</a> | <a href="">帮助</a>
+        </div>
+    </div>
+<!--头信息设置结束-->
+<!--    表单设置开始-->
+    <div class="logoInBody">
+        <div class="bodyNav">
+            <ul>
+                <li><a href="">手机注册</a></li>
+                <li><a href="">邮箱注册</a></li>
+            </ul>
+        </div>
+        <div class="bodyForm">
+            <div class="bodyImg">
+                <img src="image学习/4.1/reg_mobile.png" alt="">
+            </div>
+            <form action="" class="allForm">
+                <div class="formContent">
+                    <div class="ppNumber"><span>*</span>
+                        手机号码：<input class="formInput" type="text">
+                    </div>
+                    <div class="ppAttention">请使用11位数字，海外用户请使用邮箱注册</div>
+                </div>
+                <div class="formContent1 attention">使用微博账号直接<a class="log">登录</a></div>
+                <div class="formContent">
+                    <div class="ppNumber"><span>*</span>
+                        设置密码：<input class="formInput" type="password">
+                    </div>
+                    <div class="ppAttention">6-16位字符（字母、数字、符号），区分大小写</div>
+                </div>
+                <div class="formContent2">
+                    <div class="checkTitle"><span>*</span>
+                    兴趣标签：
+                    </div>
+                    <div class="check">
+                        <input type="checkbox">新闻
+                        <input type="checkbox">娱乐
+                        <input type="checkbox">文化
+                        <input type="checkbox">体育
+                        <input type="checkbox">IT
+                        <input type="checkbox">财经
+                        <input type="checkbox">时尚
+                        <input type="checkbox">汽车
+                        <input type="checkbox">房产
+                        <input type="checkbox">生活
+                    </div>
+                </div>
+                <div class="formContent3"><span>*</span>
+                    上发短信手机：<input class="sendMassage" type="button" value="我要使用注册手机发送短信">
+                </div>
+                <div class="formContent4"><a href="">《新浪网络服务使用协议》</a></div>
+                <div class="formContent4"><a href="">《新浪个人信息保护政策》</a></div>
+            </form>
+        </div>
+        <div class="bodyAside">
+            <p>已有账号，<a href="">直接登录 >></a></p>
+        </div>
+    </div>
+<!--    表单设置结束-->
+<!--尾部信息开始-->
+    <div class="logoInFooter">
+        <div class="footerNav">
+        <ul>
+            <li><a href="">新浪简介</a></li>
+            <li><a href="">About Sina</a></li>
+            <li><a href="">广告服务</a></li>
+            <li><a href="">联系我们</a></li>
+            <li><a href="">招聘信息</a></li>
+            <li><a href="">网站律师</a></li>
+            <li><a href="">SINA English</a></li>
+            <li><a href="">注册</a></li>
+            <li><a href="">产品答疑</a></li>
+        </ul>
+        </div>
+        <p class="footerMassage">客户服务电话 400-052-0066 欢迎批评指正</p>
+        <p class="footerMassage">Copyright © 1996 - 2020 SINA Corporation, All Rights Reserved 新浪公司 <a>版权所有</a></p>
+    </div>
+
+</div>
+</div>
+</body>
+</html>
